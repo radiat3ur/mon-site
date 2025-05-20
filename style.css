@@ -129,7 +129,7 @@ h1, h2 {
   }
 } */
 
-@media (max-width: 900px) {
+@media (max-width: 90%) {
   header {
     transition: transform 0.3s cubic-bezier(.4,0,.2,1);
     will-change: transform;
