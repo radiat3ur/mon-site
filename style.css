@@ -44,7 +44,7 @@ nav ul li a:hover {
 }
 
 main {
-  max-width: 80%;
+  max-width: 90%;
   margin: 100px auto 2rem auto;
   padding: 2rem 1rem;
 }
@@ -91,13 +91,13 @@ h1, h2 {
 }
 
 .section h2, li {
-    margin-left: 2%;
-    margin-right: 2%;
+    margin-left: 4%;
+    margin-right: 4%;
 }
 
 .bio h2, p {
-    margin-left: 2%;
-    margin-right: 2%;
+    margin-left: 4%;
+    margin-right: 4%;
 }
 
 #lang-select {
