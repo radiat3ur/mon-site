@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const arrowUp = document.querySelector('.arrow-up');
 
   function isMobile() {
-    return window.matchMedia('(max-width: 900px)').matches;
+    return window.matchMedia('(max-width: 900px)').matches || window.innerHeight > window.innerWidth;
   }
 
   function closeMenu() {
