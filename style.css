@@ -129,12 +129,19 @@ h1, h2 {
   font-size: 2rem;
   cursor: pointer;
   position: absolute;
-  left: 1rem;
+  right: 2rem;
   top: 0.7rem;
   z-index: 1100;
+  color: #007BFF;
 }
 .menu-toggle:focus {
   outline: 2px solid #007BFF;
+}
+
+@media (min-width: 901px) {
+  .menu-toggle {
+    display: none !important;
+  }
 }
 
 @media (max-width: 900px) {

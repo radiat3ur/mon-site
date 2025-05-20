@@ -20,7 +20,9 @@ document.addEventListener('DOMContentLoaded', function() {
     arrowUp.style.display = '';
   }
 
+  // Ne rien faire si le bouton n'est pas visible (desktop)
   menuToggle.addEventListener('click', function() {
+    if (!isMobile()) return;
     if (navUl.classList.contains('menu-open')) {
       closeMenu();
     } else {
