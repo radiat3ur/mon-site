@@ -213,7 +213,7 @@ h1, h2 {
 .timeline::before {
   content: '';
   position: absolute;
-  left: 7.3%;
+  left: 7%;
   top: 0;
   width: 4px;
   height: 100%;
@@ -232,7 +232,7 @@ h1, h2 {
 }
 .timeline-icon {
   position: absolute;
-  left: 1%;
+  left: 0%;
   top: 50%;
   transform: translateY(-50%);
   background: #fff;
