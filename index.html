@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Léandre Lacroix</title>
-  <script src="header.js"></script>
+  <script src="script.js"></script>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -14,14 +14,14 @@
             <ul>
                 <li><a href="#bio">À propos</a></li>
                 <li><a href="#experience">Expériences</a></li>
-                <li><a href="#skills">Compétences</a></li>
+                <li><a href="#competence">Compétences</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <button class="menu-toggle" aria-label="Ouvrir le menu">
-                <span class="arrow-down">▼</span>
-                <span class="arrow-up" style="display:none;">▲</span>
+                <span class="fleche-bas">▼</span>
+                <span class="fleche-haut" style="display:none;">▲</span>
             </button>
-            <div class="lang-switch">
+            <div class="changerLangue">
                 <a href="index.html">FR</a> |
                 <a href="en.html">EN</a> |
                 <a href="es.html">ES</a>
@@ -30,43 +30,52 @@
     </header>
 
     <main>
-        <section id="hero">
+        <!-- <section id="top">
             <img src="assets/avatar.webp" alt="Photo de Léandre Lacroix" class="avatar">
             <h1>Léandre Lacroix</h1>
             <p>Étudiant ingénieur à l’INSA Rouen Normandie</p>
+        </section> -->
+
+        <section id="bio" class="section blanche">
+            <img src="assets/banniere.png" width="100%">
+        <!-- <h2>À propos</h2>
+        <p>Étudiant ingénieur à l’INSA Rouen, curieux et engagé, je combine rigueur scientifique et créativité. Passionné par le développement web et les travaux concrets, je m’investis avec sérieux dans chaque projet, toujours prêt à me dépasser.</p> -->
         </section>
 
-        <section id="bio" class="section light">
-        <h2>À propos</h2>
-        <p>Étudiant ingénieur à l’INSA Rouen, curieux et engagé, je combine rigueur scientifique et créativité. Passionné par le développement web et les travaux concrets, je m’investis avec sérieux dans chaque projet, toujours prêt à me dépasser.</p>
-        </section>
-
-        <section id="experience" class="section white">
+        <section id="experience" class="section blanche">
             <h2>Expériences</h2>
-            <div class="timeline">
+            <div class="filtres">
+                <button class="boutonFiltre active" data-type="projet" title="Projets"></button>
+                <button class="boutonFiltre active" data-type="pro" title="Pro"></button>
+                <button class="boutonFiltre active" data-type="asso" title="Asso"></button>
+                <button class="boutonFiltre active" data-type="etude" title="Études"></button>
+                <button class="boutonFiltre active" data-type="diplome" title="Diplôme"></button>
+            </div>
+            <div class="chronologie">
 
-                 <div class="timeline-item">
-                    <div class="timeline-icon project"><img src="assets/projet.png" alt="Projet personnel" width="40"></div>
-                    <div class="timeline-content">
-                        <strong>Application de gestion de tâches</strong> <span class="timeline-date">Depuis avril 2025</span>
+                <div class="element">
+                    <div class="icone projet"><img src="assets/projet.png" alt="Projet personnel"></div>
+                    <div class="contenu">
+                        <strong>Application de gestion de tâches</strong>
+                        <span class="date">Depuis avril 2025</span>
                         <p>Développement d'une application de gestion de tâches en Javascript avec une interface graphique.</p>
                     </div>
                 </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-icon project"><img src="assets/projet.png" alt="Projet personnel" width="40"></div>
-                    <div class="timeline-content">
-                        <strong>Site web portfolio</strong> <span class="timeline-date">Depuis mai 2025</span>
+                <div class="element">
+                    <div class="icone projet"><img src="assets/projet.png" alt="Projet personnel"></div>
+                    <div class="contenu">
+                        <strong>Site web portfolio</strong>
+                        <span class="date">Depuis mai 2025</span>
                         <p>Création d'un site web portfolio pour présenter mes projets et compétences.</p>
                     </div>
                 </div>
 
-
-                <div class="timeline-item">
-                    <div class="timeline-icon pro"><img src="assets/pro.png" alt="Professionnel" width="40"></div>
-                    <div class="timeline-content">
-                        <strong>Stage d'exécution</strong> <span class="timeline-date">Juil. 2024</span>
-                        </strong><em>Essity</em><br>
+                <div class="element">
+                    <div class="icone pro"><img src="assets/pro.png" alt="Professionnel" width="40"></div>
+                    <div class="contenu">
+                        <strong>Stage d'exécution</strong> <em>Essity</em><br>
+                        <span class="date">Juil. 2024</span>
                         <p>Poste dans la partie magasin pièces détachées de l'entreprise :</p>
                         <p>- Inventaire des stocks</p>
                         <p>- Réceptions des livraisons</p>
@@ -75,72 +84,98 @@
                     </div>
                 </div>
                     
-                <div class="timeline-item">
-                    <div class="timeline-icon studies"><img src="assets/etudes.png" alt="Études" width="40"></div>
-                    <div class="timeline-content">
-                        <strong>INSA Rouen Normandie</strong> <span class="timeline-date">Sept. 2023 - Juil. 2028</span>
+                <div class="element">
+                    <div class="icone etude"><img src="assets/etudes.png" alt="Études" width="40"></div>
+                    <div class="contenu">
+                        <strong>INSA Rouen Normandie</strong>
+                        <span class="date">Sept. 2023 - Juil. 2028</span>
                         <p>Activités et associations :</p>
                         <p>- Section musique étude</p>
                         <p>- Crosstraining et badminton</p>
                     </div>
                 </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-icon studies"><img src="assets/etudes.png" alt="Etudes" width="40"></div>
-                    <div class="timeline-content">
-                        <strong>PIX</strong> <span class="timeline-date">Janv. 2024</span>
+                <div class="element">
+                    <div class="icone diplome"><img src="assets/diplome.png" alt="Diplômes" width="40"></div>
+                    <div class="contenu">
+                        <strong>PIX</strong>
+                        <span class="date">Janv. 2024</span>
                     </div>
                 </div>
                 
-                <div class="timeline-item">
-                    <div class="timeline-icon studies"><img src="assets/etudes.png" alt="Études" width="40"></div>
-                    <div class="timeline-content">
-                        <strong>Brevet d'initiation aéronautique</strong> <span class="timeline-date">Juil 2021</span>
+                <div class="element">
+                    <div class="icone diplome"><img src="assets/diplome.png" alt="Diplômes" width="40"></div>
+                    <div class="contenu">
+                        <strong>Brevet d'initiation aéronautique</strong>
+                        <p>Mention très bien</p>
+                        <span class="date">Juil 2021</span>
                     </div>
                 </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-icon studies"><img src="assets/etudes.png" alt="Études" width="40"></div>
-                    <div class="timeline-content">
-                        <strong>Lycée Pierre Corneille - Rouen</strong> <span class="timeline-date">Sept. 2020 - Juin 2023</span>
-                        <p>Baccalauréat général mention Très bien</p>
+                <div class="element">
+                    <div class="icone diplome"><img src="assets/diplome.png" alt="Diplômes" width="40"></div>
+                    <div class="contenu">
+                        <strong>Baccalauréat général</strong>
+                        <span class="date">Juin 2023</span>
+                        <p>Mention très bien</p>
                         <p>Spécialités : Mathématiques, Physique-Chimie</p>
+                    </div>
+                </div>
+
+                <div class="element">
+                    <div class="icone etude"><img src="assets/etudes.png" alt="Études" width="40"></div>
+                    <div class="contenu">
+                        <strong>Lycée Pierre Corneille - Rouen</strong>
+                        <span class="date">Sept. 2020 - Juin 2023</span>
                         <p>Options : Mathématiques expertes, Latin</p>
                     </div>
                 </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-icon studies"><img src="assets/etudes.png" alt="Études" width="40"></div>
-                    <div class="timeline-content">
-                        <strong>PSC1</strong><br> <span class="timeline-date">Juin 2020</span>
+                <div class="element">
+                    <div class="icone diplome"><img src="assets/diplome.png" alt="Diplômes" width="40"></div>
+                    <div class="contenu">
+                        <strong>PSC1</strong><br>
+                        <span class="date">Juil. 2020</span>
                     </div>
                 </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-icon studies"><img src="assets/pro.png" alt="Études" width="40"></div>
-                    <div class="timeline-content">
-                        <strong>Stagiaire en laboratoire</strong><span class="timeline-date">Déc. 2019</span>
+                <div class="element">
+                    <div class="icone pro"><img src="assets/pro.png" alt="Études" width="40"></div>
+                    <div class="contenu">
+                        <strong>Stagiaire en laboratoire</strong>
                         <em>CORIA</em><br>
+                        <span class="date">Déc. 2019</span>
                         <p>- Compréhension du fonctionnement d'un laboratoire de recherche</p>
                         <p>- Observation de l'utilisation du matériel spécifique : laser, chambre de combustion</p>
                         <p>- Observation des techniques de laboratoire : suivi et compréhension des analyses numériques d'écoulement avec des doctorants</p>
                     </div>
                 </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-icon studies"><img src="assets/etudes.png" alt="Études" width="40"></div>
-                    <div class="timeline-content">
-                        <strong>Collège Pablo Picasso - Saint-Étienne-du-Rouvray</strong> <span class="timeline-date">Sept. 2017 - Juil. 2020</span>
+                <div class="element">
+                    <div class="icone diplome"><img src="assets/diplome.png" alt="Diplômes" width="40"></div>
+                    <div class="contenu">
+                        <strong>Diplôme national du brevet (DNB)</strong>
+                        <span class="date">Juil. 2020</span>
+                        <p>Mention très bien</p>
+                    </div>
+                </div>
+
+                <div class="element">
+                    <div class="icone etude"><img src="assets/etudes.png" alt="Études" width="40"></div>
+                    <div class="contenu">
+                        <strong>Collège Pablo Picasso - Saint-Étienne-du-Rouvray</strong>
+                        <span class="date">Sept. 2017 - Juil. 2020</span>
                         <p>Activités et associations :</p>
                         <p>- Club Scratch</p>
                         <p>- UNSS multisports, escalade</p>
                     </div>
                 </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-icon studies"><img src="assets/etudes.png" alt="Études" width="40"></div>
-                    <div class="timeline-content">
-                        <strong>Conservatoire de musique et de danse - Préparation au CEM</strong> <span class="timeline-date">Depuis 2013</span>
+                <div class="element">
+                    <div class="icone etude"><img src="assets/etudes.png" alt="Études" width="40"></div>
+                    <div class="contenu">
+                        <strong>Conservatoire de musique et de danse - Préparation au CEM</strong>
+                        <span class="date">Depuis 2013</span>
                         <p>- Piano cycle 3 validé</p>
                         <p>- Formation musicale en musiques actuelles cycle 3 validé</p>
                         <p>- Violoncelle cycle 2 validé</p>
@@ -153,7 +188,7 @@
             </div>
         </section>
 
-        <section id="skills" class="section white">
+        <section id="skills" class="section blanche">
             <h2>Compétences</h2>
             <ul>
                 <li>Python</li>
@@ -164,13 +199,28 @@
             </ul>
         </section>
 
-        <section id="contact" class="section light">
+        <section id="contact" class="section grise">
             <h2>Contact</h2>
-            <ul>
-                <a href="https://www.linkedin.com/in/leandrelacr0ix"><img src="assets/linkedin.png" width="150px" alt="LinkedIn"></a>
-                <a href="mailto:leandrelacroix.ll@gmail.com"><img src="assets/mail.webp" width="150px" alt="Mail"></a>
-                <a href="https://github.com/radiat3ur"><img src="assets/github.png" width="150px" alt="GitHub"></a>
-            </ul>
+            <div class="contacts">
+                <div class="contact-element">
+                    <a href="https://www.linkedin.com/in/leandrelacr0ix" class="contact-logo">
+                        <img src="assets/linkedin.png" width="150px" alt="LinkedIn">
+                    </a>
+                    <p class="contact-id">leandrelacr0ix</p>
+                </div>
+                <div class="contact-element">
+                    <a href="mailto:leandrelacroix.ll@gmail.com" class="contact-logo">
+                        <img src="assets/mail.png" width="150px" alt="Mail">
+                    </a>
+                    <p class="contact-id">leandrelacroix.ll@gmail.com</p>
+                </div>
+                <div class="contact-element">
+                    <a href="https://github.com/radiat3ur" class="contact-logo">
+                        <img src="assets/github.png" width="150px" alt="GitHub">
+                    </a>
+                    <p class="contact-id">radiat3ur</p>
+                </div>
+            </div>
         </section>
     </main>
 </body>
