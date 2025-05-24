@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Léandre Lacroix</title>
-  <script src="script.js"></script>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Léandre Lacroix, engineering student at INSA Rouen Normandie, passionate about web development.">
+    <meta name="robots" content="index, follow">
+    <title>Léandre Lacroix</title>
+    <link rel="icon" href="assets/favicon.png">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+        emailjs.init({ publicKey: "joATxlf01ucg1oicv" });
+        })();
+    </script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <nav>
+        <nav role="navigation">
             <ul>
                 <li><a href="#bio">About</a></li>
                 <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#certifications">projets</a></li>
-                <li><a href="#projets">Certifications</a></li>
-                <li><a href="#competence">Skills</a></li>
+                <li><a href="#competences">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <button class="menu-toggle" aria-label="Ouvrir le menu">
+            <button class="menu-toggle" aria-label="Navigation menu (open/close)">
                 <span class="fleche-bas">▼</span>
                 <span class="fleche-haut" style="display:none;">▲</span>
             </button>
@@ -39,123 +45,380 @@
             <p>Engineering student at INSA Rouen Normandie</p>
         </section>
 
-        <section id="bio" class="section grise">
+        <section id="bio" class="section blanche">
             <h2>About</h2>
-            <p>Engineering student at INSA Rouen, curious and committed, I combine scientific rigor and creativity. Passionate about web development and hands-on work, I invest myself seriously in every projet, always ready to go the extra mile.</p>
+            <p>Engineering student at INSA Rouen, curious and dedicated, I combine scientific rigor with creativity. Passionate about web development and hands-on projects, I approach each endeavor seriously and always strive to exceed expectations.</p>
         </section>
 
         <section id="experience" class="section blanche">
             <h2>Experience</h2>
-            <ul>
-                <li>
-                    <strong>Internship</strong> • <em>Essity</em><br>
-                    <span>July 2024 | Hondouville, Normandy, France • On site</span>
-                    <p>Position in the spare parts warehouse of the company:</p>
-                    <p>- Inventory management</p>
-                    <p>- Receiving deliveries</p>
-                    <p>- Counter service</p>
-                    <p>- Organizing parts</p>
-                </li>
-                <li>
-                    <strong>Laboratory Intern</strong> • <em>CORIA</em><br>
-                    <span>December 2019 | Rouen, Normandy, France • On site</span>
-                    <p>- Understanding the operation of a research laboratory</p>
-                    <p>- Observing the use of specific equipment: laser, combustion chamber</p>
-                    <p>- Observing laboratory techniques: following and understanding numerical flow analyses with PhD students</p>
-                </li>
-            </ul>
+            <div class="filtres">
+                <button class="boutonFiltre active" data-type="projet" title="Projects"></button>
+                <button class="boutonFiltre active" data-type="pro" title="Professional"></button>
+                <button class="boutonFiltre active" data-type="asso" title="Associative"></button>
+                <button class="boutonFiltre active" data-type="etude" title="Studies"></button>
+                <button class="boutonFiltre active" data-type="diplome" title="Diploma"></button>
+            </div>
+            <div class="chronologie">
+
+                <div class="element">
+                    <div class="icone projet"><img src="assets/projet.png" alt="Personal project"></div>
+                    <div class="contenu">
+                        <strong>Portfolio website</strong>
+                        <span class="date">May 2025</span>
+                        <p>Creation of a personal website to showcase my projects and skills.</p>
+                    </div>
+                </div>
+
+                <div class="element">
+                    <div class="icone projet"><img src="assets/projet.png" alt="Personal project"></div>
+                    <div class="contenu">
+                        <strong>Task management app</strong>
+                        <span class="date">Since April 2025</span>
+                        <p>Development of a task management app in JavaScript with a graphical interface.</p>
+                    </div>
+                </div>
+
+                <div class="element">
+                    <div class="icone pro"><img src="assets/pro.png" alt="Professional" width="40"></div>
+                    <div class="contenu">
+                        <strong>Internship</strong> <em>Essity</em><br>
+                        <span class="date">July 2024</span>
+                        <p>Worked in the spare parts warehouse:</p>
+                        <p>- Stock inventory</p>
+                        <p>- Receiving deliveries</p>
+                        <p>- Counter service</p>
+                        <p>- Organizing parts</p>
+                    </div>
+                </div>
+
+                <div class="element">
+                    <div class="icone etude"><img src="assets/etudes.png" alt="Studies" width="40"></div>
+                    <div class="contenu">
+                        <strong>INSA Rouen Normandie</strong>
+                        <span class="date">Sept. 2023 - July 2028</span>
+                        <p>Activities and associations:</p>
+                        <p>- Music-study section</p>
+                        <p>- Crosstraining and badminton</p>
+                    </div>
+                </div>
+
+                <div class="element">
+                    <div class="icone diplome"><img src="assets/diplome.png" alt="Diplomas" width="40"></div>
+                    <div class="contenu">
+                        <strong>PIX</strong>
+                        <span class="date">Jan. 2024</span>
+                    </div>
+                </div>
+
+                <div class="element">
+                    <div class="icone diplome"><img src="assets/diplome.png" alt="Diplomas" width="40"></div>
+                    <div class="contenu">
+                        <strong>Basic Aeronautics Certificate</strong>
+                        <span class="date">July 2021</span>
+                        <p>With highest honors</p>
+                    </div>
+                </div>
+
+                <div class="element">
+                    <div class="icone diplome"><img src="assets/diplome.png" alt="Diplomas" width="40"></div>
+                    <div class="contenu">
+                        <strong>General Baccalaureate</strong>
+                        <span class="date">June 2023</span>
+                        <p>With highest honors</p>
+                        <p>Specialties: Mathematics, Physics-Chemistry</p>
+                    </div>
+                </div>
+
+                <div class="element">
+                    <div class="icone etude"><img src="assets/etudes.png" alt="Studies" width="40"></div>
+                    <div class="contenu">
+                        <strong>Lycée Pierre Corneille - Rouen</strong>
+                        <span class="date">Sept. 2020 - June 2023</span>
+                        <p>Options: Advanced Mathematics, Latin</p>
+                    </div>
+                </div>
+
+                <div class="element">
+                    <div class="icone diplome"><img src="assets/diplome.png" alt="Diplomas" width="40"></div>
+                    <div class="contenu">
+                        <strong>PSC1</strong><br>
+                        <span class="date">July 2020</span>
+                    </div>
+                </div>
+
+                <div class="element">
+                    <div class="icone pro"><img src="assets/pro.png" alt="Studies" width="40"></div>
+                    <div class="contenu">
+                        <strong>Intern in Laboratory</strong>
+                        <em>CORIA</em><br>
+                        <span class="date">Dec. 2019</span>
+                        <p>- Understanding how a research lab works</p>
+                        <p>- Observing the use of specialized equipment: laser, combustion chamber</p>
+                        <p>- Following lab techniques: analyzing flow simulations with PhD students</p>
+                    </div>
+                </div>
+
+                <div class="element">
+                    <div class="icone diplome"><img src="assets/diplome.png" alt="Diplomas" width="40"></div>
+                    <div class="contenu">
+                        <strong>Brevet (French middle school diploma)</strong>
+                        <span class="date">July 2020</span>
+                        <p>With highest honors</p>
+                    </div>
+                </div>
+
+                <div class="element">
+                    <div class="icone etude"><img src="assets/etudes.png" alt="Studies" width="40"></div>
+                    <div class="contenu">
+                        <strong>Collège Pablo Picasso - Saint-Étienne-du-Rouvray</strong>
+                        <span class="date">Sept. 2017 - July 2020</span>
+                        <p>Activities and clubs:</p>
+                        <p>- Scratch club</p>
+                        <p>- UNSS multisport, climbing</p>
+                    </div>
+                </div>
+
+                <div class="element">
+                    <div class="icone etude"><img src="assets/etudes.png" alt="Studies" width="40"></div>
+                    <div class="contenu">
+                        <strong>Conservatory of Music and Dance – CEM Preparation</strong>
+                        <span class="date">Since 2013</span>
+                        <p>- Piano Cycle 3 completed</p>
+                        <p>- Music theory in modern music Cycle 3 completed</p>
+                        <p>- Cello Cycle 2 completed</p>
+                        <p>- Preparing for Certificate of Musical Studies (CEM)</p>
+                        <p>- Stage experience: solo, band, and ensemble performances</p>
+                        <p>- Member of a modern music group (keyboard)</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="education" class="section grise">
-            <h2>Education</h2>
-            <ul>
-                <li>
-                    <strong>INSA Rouen Normandie</strong><br>
-                    <span>Sept. 2023 - July 2028</span>
-                    <p>Activities and associations:</p>
-                    <p>- Music study section</p>
-                    <p>- Crosstraining and badminton</p>
-                </li>
-                <li>
-                    <strong>Pierre Corneille High School - Rouen</strong><br>
-                    <p>Diploma: General Baccalaureate with highest honors</p>
-                    <span>Sept. 2020 - June 2023</span>
-                    <p>Specialties: Mathematics, Physics-Chemistry</p>
-                    <p>Options: Advanced Mathematics, Latin</p>
-                </li>
-                <li>
-                    <strong>Pablo Picasso Middle School - Saint-Étienne-du-Rouvray</strong><br>
-                    <p>Diploma: National Brevet Diploma (DNB) with highest honors</p>
-                    <span>Sept. 2017 - July 2020</span>
-                    <p>Activities and associations:</p>
-                    <p>- Scratch Club</p>
-                    <p>- UNSS multisports, climbing</p>
-                </li>
-                <li>
-                    <strong>Conservatory of Music and Dance</strong><br>
-                    <p>Multidisciplinary musical training - Preparation for the CEM</p>
-                    <span>Since 2013</span>
-                    <p>- Piano cycle 3 completed</p>
-                    <p>- Modern music training cycle 3 completed</p>
-                    <p>- Cello cycle 2 completed</p>
-                    <p>- Preparation for the Certificate of Musical Studies (CEM)</p>
-                    <p>- Stage experience: solo, group, and ensemble concerts</p>
-                    <p>- Participation in a modern music group (keyboards)</p>
-                    <p>- Personal practice of drums, electric guitar, acoustic guitar, and bass</p>
-                </li>
-            </ul>
-        </section>
+        <section id="competences" class="section blanche">
+            <h2>Skills & Hobbies</h2>
+            <div class="competence-container">
 
-        <section id="certifications" class="section blanche">
-            <h2>Certifications</h2>
-            <ul>
-                <li>
-                    <strong>Basic Aeronautical Certificate</strong><br>
-                    <span>June 2021</span>
-                </li>
-                <li>
-                    <strong>PIX</strong><br>
-                    <span>Jan. 2024</span>
-                </li>
-                <li>
-                    <strong>PSC1 (First Aid Certificate)</strong><br>
-                    <span>June 2020</span>
-            </ul>
+                <section class="categorie">
+                    <h3>Spftware</h3>
+                    <h4>➤ Systems</h4>
+                    <div class="competence">
+                        <span>Window / Linux</span>
+                        <div class="points">
+                            <span class="point active"></span>
+                            <span class="point active"></span>
+                            <span class="point"></span>
+                        </div>
+                    </div>
+                    <h4>➤ Office</h4>
+                    <div class="competence">
+                        <span>Microsoft Office</span>
+                        <div class="points">
+                            <span class="point active"></span>
+                            <span class="point active"></span>
+                            <span class="point active"></span>
+                        </div>
+                    </div>
+                    <div class="competence">
+                        <span>LaTeX</span>
+                        <div class="points">
+                            <span class="point active"></span>
+                            <span class="point active"></span>
+                            <span class="point active"></span>
+                        </div>
+                    </div>
+                    <div class="competence">
+                        <span>OpenOffice</span>
+                        <div class="points">
+                            <span class="point active"></span>
+                            <span class="point active"></span>
+                            <span class="point"></span>
+                        </div>
+                    </div>
+                </section>
 
-        <section id="projets" class="section grise">
-            <h2>projets</h2>
-            <ul>
-                <li>
-                    <strong>Portfolio website</strong><br>
-                    <span>2024</span>
-                    <p>Created a portfolio website to showcase my projets and skills.</p>
-                </li>
-                <li>
-                    <strong>Task management application</strong><br>
-                    <span>2023</span>
-                    <p>Developed a task management application in JavaScript with a graphical interface.</p>
-                </li>
-            </ul>
-        </section>
+                <section class="categorie">
+                    <h3>Communication</h3>
+                    <h4>➤ Languages</h4>
+                    <div class="competence" bulle="Native Language">
+                    <span>French <span class="icone-info">🛈</span></span>
+                        <div class="points">
+                            <span class="point active"></span>
+                            <span class="point active"></span>
+                            <span class="point active"></span>
+                        </div>
+                    </div>
+                    <div class="competence" bulle="Level B2">
+                        <span>English <span class="icone-info">🛈</span></span>
+                        <div class="points">
+                            <span class="point active"></span>
+                            <span class="point active"></span>
+                            <span class="point"></span>
+                        </div>
+                    </div>
+                    <div class="competence" bulle="Level B2">
+                        <span>Spanish <span class="icone-info">🛈</span></span>
+                        <div class="points">
+                            <span class="point active"></span>
+                            <span class="point active"></span>
+                            <span class="point"></span>
+                        </div>
+                    </div>
+                    <h4>➤ Management</h4>
+                    <div class="competence">
+                        <span>Teamwork</span>
+                        <div class="points">
+                            <span class="point active"></span>
+                            <span class="point active"></span>
+                            <span class="point active"></span>
+                        </div>
+                    </div>
+                </section>
 
-        <section id="skills" class="section blanche">
-            <h2>Skills</h2>
-            <ul>
-                <li>Python</li>
-                <li>JavaScript</li>
-                <li>MATLAB</li>
-                <li>HTML, CSS</li>
-                <li>Git, GitHub</li>
-            </ul>
+                <section class="categorie">
+                    <h3>Programming</h3>
+                    <div class="competence" bulle="Used for data handling, visualization, and training models">
+                        <span>Python <span class="icone-info">🛈</span></span>
+                        <div class="points">
+                            <span class="point active"></span>
+                            <span class="point active"></span>
+                            <span class="point"></span>
+                        </div>
+                    </div>
+                    <div class="competence" bulle="Learned academically for algorithmics and logic">
+                        <span>Pascal <span class="icone-info">🛈</span></span>
+                        <div class="points">
+                            <span class="point active"></span>
+                            <span class="point active"></span>
+                            <span class="point"></span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="categorie">
+                    <h3>Web</h3>
+                    <div class="competence">
+                        <span>HTML</span>
+                        <div class="points">
+                            <span class="point active"></span>
+                            <span class="point active"></span>
+                            <span class="point active"></span>
+                        </div>
+                    </div>
+                    <div class="competence">
+                        <span>CSS</span>
+                        <div class="points">
+                            <span class="point active"></span>
+                            <span class="point active"></span>
+                            <span class="point active"></span>
+                        </div>
+                    </div>
+                    <div class="competence">
+                        <span>JavaScript</span>
+                        <div class="points">
+                            <span class="point active"></span>
+                            <span class="point active"></span>
+                            <span class="point"></span>
+                        </div>
+                    </div>
+                    <div class="competence">
+                        <span>MySQL</span>
+                        <div class="points">
+                            <span class="point active"></span>
+                            <span class="point"></span>
+                            <span class="point"></span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="categorie">
+                    <h3>Hobbies</h3>
+                    <div class="competence" bulle="Personal practice of drums, electric guitar, acoustic guitar, and bass">
+                        <span>Music <span class="icone-info">🛈</span></span>
+                    </div>
+                    <div class="competence" bulle="Reading novels and autobiographical, historical and educational graphic novels">
+                        <span>Reading <span class="icone-info">🛈</span></span>
+                    </div>
+                    <div class="competence" bulle="Creating websites with HTML, CSS and JavaScript">
+                        <span>Web development <span class="icone-info">🛈</span></span>
+                    </div>
+                    <div class="competence" bulle="Deep interest in the topic with regular reading. I use the Eisenhower matrix and timeboxing to organize daily tasks">
+                        <span>Time management <span class="icone-info">🛈</span></span>
+                    </div>
+                    <!-- <div class="competence" bulle="Participation in machine learning competitions on the Kaggle platform">
+                        <span>Kaggle contests</span>
+                    </div> -->
+                    <div class="competence" bulle="Creating crochet and sewing pieces. A manual activity requiring patience and creativity">
+                        <span>Crochet & sewing <span class="icone-info">🛈</span></span>
+                    </div>
+                </section>
+            </div>
+            <div class="points-legende">
+                <ul>
+                    <li bulle="I know the basics and have used it a bit">
+                        <div class="points">
+                            <span class="point active"></span>
+                            <span class="point"></span>
+                            <span class="point"></span>
+                        </div>
+                        <span>Beginner <span class="icone-info">🛈</span></span>
+                    </li>
+                    <li bulle="I'm comfortable with it and have used it  in multiple (school or personal) projects">
+                        <div class="points">
+                            <span class="point active"></span>
+                            <span class="point active"></span>
+                            <span class="point"></span>
+                        </div>
+                        <span>Proficient <span class="icone-info">🛈</span></span>
+                    </li>
+                    <li bulle="I have in-depth knowledge and master advanced concepts">
+                        <div class="points">
+                            <span class="point active"></span>
+                            <span class="point active"></span>
+                            <span class="point active"></span>
+                        </div>
+                        <span>Advanced or expert <span class="icone-info">🛈</span></span>
+                    </li>
+                </ul>
+            </div>
         </section>
 
         <section id="contact" class="section grise">
             <h2>Contact</h2>
-            <ul>
-                <li><a href="https://www.linkedin.com/in/leandrelacr0ix">LinkedIn</a></li>
-                <li><a href="mailto:leandrelacroix.ll@gmail.com">leandrelacroix.ll@gmail.com</a></li>
-                <li><a href="https://github.com/radiat3ur">GitHub</a></li>
-            </ul>
+            <div class="contacter">
+                <div class="container">
+                    <div class="width-100">
+                        <form id="contact-form" class="contacter form">
+                            <a href="assets/cv-eng.pdf" download class="btn-cv">📄 Download my CV</a><br><br>
+                            <input type="text" name="name" placeholder="Name..." required>
+                            <input type="email" name="email" placeholder="Email address..." required>
+                            <input type="text" name="title" placeholder="Subject..." required>
+                            <textarea name="message" placeholder="Enter a message..." required></textarea>
+                            <button type="submit">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="contacts">
+                <div class="contact-element">
+                    <a href="https://www.linkedin.com/in/leandrelacr0ix" class="contact-logo">
+                        <img src="assets/linkedin.png" width="150px" alt="LinkedIn">
+                    </a>
+                    <p class="contact-id">leandrelacr0ix</p>
+                </div>
+                <div class="contact-element">
+                    <a href="mailto:leandrelacroix.ll@gmail.com" class="contact-logo">
+                        <img src="assets/mail.png" width="150px" alt="Email">
+                    </a>
+                    <p class="contact-id">leandrelacroix.ll@gmail.com</p>
+                </div>
+                <div class="contact-element">
+                    <a href="https://github.com/radiat3ur" class="contact-logo">
+                        <img src="assets/github.png" width="150px" alt="GitHub">
+                    </a>
+                    <p class="contact-id">radiat3ur</p>
+                </div>
+            </div>
         </section>
     </main>
 </body>

@@ -1,23 +1,32 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Léandre Lacroix</title>
-  <script src="script.js"></script>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Léandre Lacroix, étudiant ingénieur à l’INSA Rouen Normandie, passionné par le développement web.">
+    <meta name="robots" content="index, follow">
+    <title>Léandre Lacroix</title>
+    <link rel="icon" href="assets/favicon.png">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+        emailjs.init({ publicKey: "joATxlf01ucg1oicv" });
+        })();
+    </script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <nav>
+        <nav role="navigation">
             <ul>
                 <li><a href="#bio">À propos</a></li>
                 <li><a href="#experience">Expériences</a></li>
-                <li><a href="#competence">Compétences</a></li>
+                <li><a href="#competences">Compétences</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <button class="menu-toggle" aria-label="Ouvrir le menu">
+            <button class="menu-toggle" aria-label="Menu de navigation (ouvrir/fermer)">
                 <span class="fleche-bas">▼</span>
                 <span class="fleche-haut" style="display:none;">▲</span>
             </button>
@@ -30,16 +39,15 @@
     </header>
 
     <main>
-        <!-- <section id="top">
+        <section id="top">
             <img src="assets/avatar.webp" alt="Photo de Léandre Lacroix" class="avatar">
             <h1>Léandre Lacroix</h1>
             <p>Étudiant ingénieur à l’INSA Rouen Normandie</p>
-        </section> -->
+        </section>
 
         <section id="bio" class="section blanche">
-            <img src="assets/banniere.png" width="100%">
-        <!-- <h2>À propos</h2>
-        <p>Étudiant ingénieur à l’INSA Rouen, curieux et engagé, je combine rigueur scientifique et créativité. Passionné par le développement web et les travaux concrets, je m’investis avec sérieux dans chaque projet, toujours prêt à me dépasser.</p> -->
+            <h2>À propos</h2>
+            <p>Étudiant ingénieur à l’INSA Rouen, curieux et engagé, je combine rigueur scientifique et créativité. Passionné par le développement web et les travaux concrets, je m’investis avec sérieux dans chaque projet, toujours prêt à me dépasser.</p>
         </section>
 
         <section id="experience" class="section blanche">
@@ -56,18 +64,18 @@
                 <div class="element">
                     <div class="icone projet"><img src="assets/projet.png" alt="Projet personnel"></div>
                     <div class="contenu">
-                        <strong>Application de gestion de tâches</strong>
-                        <span class="date">Depuis avril 2025</span>
-                        <p>Développement d'une application de gestion de tâches en Javascript avec une interface graphique.</p>
+                        <strong>Site web portfolio</strong>
+                        <span class="date">Mai 2025</span>
+                        <p>Création d'un site web portfolio pour présenter mes projets et compétences.</p>
                     </div>
                 </div>
 
                 <div class="element">
                     <div class="icone projet"><img src="assets/projet.png" alt="Projet personnel"></div>
                     <div class="contenu">
-                        <strong>Site web portfolio</strong>
-                        <span class="date">Depuis mai 2025</span>
-                        <p>Création d'un site web portfolio pour présenter mes projets et compétences.</p>
+                        <strong>Application de gestion de tâches</strong>
+                        <span class="date">Depuis avril 2025</span>
+                        <p>Développement d'une application de gestion de tâches en Javascript avec une interface graphique.</p>
                     </div>
                 </div>
 
@@ -107,8 +115,8 @@
                     <div class="icone diplome"><img src="assets/diplome.png" alt="Diplômes" width="40"></div>
                     <div class="contenu">
                         <strong>Brevet d'initiation aéronautique</strong>
-                        <p>Mention très bien</p>
                         <span class="date">Juil 2021</span>
+                        <p>Mention très bien</p>
                     </div>
                 </div>
 
@@ -182,25 +190,215 @@
                         <p>- Préparation au Certificat d'Etude Musicale (CEM)</p>
                         <p>- Expérience scénique : concerts en solo, en groupe et en ensemble</p>
                         <p>- Participation à un groupe de musiques actuelles (claviers)</p>
-                        <p>- Pratique personnelle de la batterie, guitare électrique, guitare acoustique et basse</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="skills" class="section blanche">
-            <h2>Compétences</h2>
-            <ul>
-                <li>Python</li>
-                <li>JavaScript</li>
-                <li>MATLAB</li>
-                <li>HTML, CSS</li>
-                <li>Git, GitHub</li>
-            </ul>
+        <section id="competences" class="section blanche">
+            <h2>Compétences & Hobbies</h2>
+            <div class="competence-container">
+
+                <section class="categorie">
+                    <h3>Logiciels</h3>
+                    <h4>➤ Systèmes</h4>
+                    <div class="competence">
+                        <span>Window / Linux</span>
+                        <div class="points">
+                            <span class="point active"></span>
+                            <span class="point active"></span>
+                            <span class="point"></span>
+                        </div>
+                    </div>
+                    <h4>➤ Bureautique</h4>
+                    <div class="competence">
+                        <span>Microsoft Office</span>
+                        <div class="points">
+                            <span class="point active"></span>
+                            <span class="point active"></span>
+                            <span class="point active"></span>
+                        </div>
+                    </div>
+                    <div class="competence">
+                        <span>LaTeX</span>
+                        <div class="points">
+                            <span class="point active"></span>
+                            <span class="point active"></span>
+                            <span class="point active"></span>
+                        </div>
+                    </div>
+                    <div class="competence">
+                        <span>OpenOffice</span>
+                        <div class="points">
+                            <span class="point active"></span>
+                            <span class="point active"></span>
+                            <span class="point"></span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="categorie">
+                    <h3>Communication</h3>
+                    <h4>➤ Langues</h4>
+                    <div class="competence" bulle="Langue maternelle">
+                    <span>Français <span class="icone-info">🛈</span></span>
+                        <div class="points">
+                            <span class="point active"></span>
+                            <span class="point active"></span>
+                            <span class="point active"></span>
+                        </div>
+                    </div>
+                    <div class="competence" bulle="Niveau B2">
+                        <span>Anglais <span class="icone-info">🛈</span></span>
+                        <div class="points">
+                            <span class="point active"></span>
+                            <span class="point active"></span>
+                            <span class="point"></span>
+                        </div>
+                    </div>
+                    <div class="competence" bulle="Niveau B2">
+                        <span>Espagnol <span class="icone-info">🛈</span></span>
+                        <div class="points">
+                            <span class="point active"></span>
+                            <span class="point active"></span>
+                            <span class="point"></span>
+                        </div>
+                    </div>
+                    <h4>➤ Management</h4>
+                    <div class="competence">
+                        <span>Travail en équipe</span>
+                        <div class="points">
+                            <span class="point active"></span>
+                            <span class="point active"></span>
+                            <span class="point active"></span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="categorie">
+                    <h3>Programmation</h3>
+                    <div class="competence" bulle="Utilisé pour la manipulation de données, la visualisation, et l'entraînement de modèles">
+                        <span>Python <span class="icone-info">🛈</span></span>
+                        <div class="points">
+                            <span class="point active"></span>
+                            <span class="point active"></span>
+                            <span class="point"></span>
+                        </div>
+                    </div>
+                    <div class="competence" bulle="Langage appris dans un cadre scolaire pour l’algorithmique et la logique">
+                        <span>Pascal <span class="icone-info">🛈</span></span>
+                        <div class="points">
+                            <span class="point active"></span>
+                            <span class="point active"></span>
+                            <span class="point"></span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="categorie">
+                    <h3>Web</h3>
+                    <div class="competence">
+                        <span>HTML</span>
+                        <div class="points">
+                            <span class="point active"></span>
+                            <span class="point active"></span>
+                            <span class="point active"></span>
+                        </div>
+                    </div>
+                    <div class="competence">
+                        <span>CSS</span>
+                        <div class="points">
+                            <span class="point active"></span>
+                            <span class="point active"></span>
+                            <span class="point active"></span>
+                        </div>
+                    </div>
+                    <div class="competence">
+                        <span>JavaScript</span>
+                        <div class="points">
+                            <span class="point active"></span>
+                            <span class="point active"></span>
+                            <span class="point"></span>
+                        </div>
+                    </div>
+                    <div class="competence">
+                        <span>MySQL</span>
+                        <div class="points">
+                            <span class="point active"></span>
+                            <span class="point"></span>
+                            <span class="point"></span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="categorie">
+                    <h3>Hobbies</h3>
+                    <div class="competence" bulle="Pratique personnelle de la batterie, guitare électrique, guitare acoustique et basse">
+                        <span>Musique <span class="icone-info">🛈</span></span>
+                    </div>
+                    <div class="competence" bulle="Lecture de romans et de bandes dessinées autobiographiques, historiques et de vulgarisation">
+                        <span>Lecture <span class="icone-info">🛈</span></span>
+                    </div>
+                    <div class="competence" bulle="Création de sites web avec HTML, CSS et JavaScript">
+                        <span>Développement web <span class="icone-info">🛈</span></span>
+                    </div>
+                    <div class="competence" bulle="Je m’informe beaucoup sur le sujet et lis régulièrement à ce propos. J’utilise la matrice d’Eisenhower et pratique la timeboxing pour organiser mes journées.">
+                        <span>Gestion du temps <span class="icone-info">🛈</span></span>
+                    </div>
+                    <!-- <div class="competence" bulle="Participation à des compétitions de machine learning sur la plateforme Kaggle">
+                        <span>Concours Kaggle</span>
+                    </div> -->
+                    <div class="competence" bulle="Création de pièces en crochet et couture. Activité manuelle exigeant patience et créativité">
+                        <span>Crochet & couture <span class="icone-info">🛈</span></span>
+                    </div>
+                </section>
+            </div>
+            <div class="points-legende">
+                <ul>
+                    <li bulle="Je connais les bases et l'ai un peu utilisé">
+                        <div class="points">
+                            <span class="point active"></span>
+                            <span class="point"></span>
+                            <span class="point"></span>
+                        </div>
+                        <span>Débutant <span class="icone-info">🛈</span></span>
+                    </li>
+                    <li bulle="Je suis à l'aise avec et l'ai utilisé sur plusieurs projets (scolaires ou personnels)">
+                        <div class="points">
+                            <span class="point active"></span>
+                            <span class="point active"></span>
+                            <span class="point"></span>
+                        </div>
+                        <span>Maîtrisé <span class="icone-info">🛈</span></span>
+                    </li>
+                    <li  bulle="Je le connais en profondeur et en maîtrise les concepts avancés">
+                        <div class="points">
+                            <span class="point active"></span>
+                            <span class="point active"></span>
+                            <span class="point active"></span>
+                        </div>
+                        <span>Avancé ou expert <span class="icone-info">🛈</span></span>
+                    </li>
+                </ul>
+            </div>
         </section>
 
         <section id="contact" class="section grise">
             <h2>Contact</h2>
+            <div class="contacter">
+                <div class="container">
+                    <div class="width-100">
+                        <form id="contact-form" class="contacter form">
+                            <a href="assets/cv-fr.pdf" download class="btn-cv">📄 Télécharger mon CV</a><br><br>
+                            <input type="text" name="name" placeholder="Nom..." required>
+                            <input type="email" name="email" placeholder="Adresse e-mail..." required>
+                            <input type="text" name="title" placeholder="Sujet..." required>
+                            <textarea name="message" placeholder="Entrez un message..." required></textarea>
+                            <button type="submit">Envoyer</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
             <div class="contacts">
                 <div class="contact-element">
                     <a href="https://www.linkedin.com/in/leandrelacr0ix" class="contact-logo">
