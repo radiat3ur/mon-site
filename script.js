@@ -64,7 +64,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 ['projet', 'pro', 'asso', 'etudes', 'diplome'].includes(cls)
             );
             const show = types.some(t => typesActifs.includes(t));
-            el.style.display = show ? '' : 'none';
+            
+            if (show) {
+                el.classList.remove('hide');
+                el.style.display = '';
+            } else {
+                el.classList.add('hide');
+            }
         });
     }
 

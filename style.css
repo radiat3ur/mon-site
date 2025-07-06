@@ -235,7 +235,7 @@ h2 {
 .boutonFiltre[data-type="pro"].active { background-image: url('assets/pro.png'); }
 .boutonFiltre[data-type="asso"].active { background-image: url('assets/asso.png'); }
 .boutonFiltre[data-type="etudes"].active { background-image: url('assets/etudes.png'); }
-.boutonFiltre[data-type="diplome"] { background-image: url('assets/diplome.png'); }
+.boutonFiltre[data-type="diplome"].active { background-image: url('assets/diplome.png'); }
 
 .boutonFiltre:not(.active) { background-image: none !important; }
 
