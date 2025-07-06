@@ -10,12 +10,11 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">
         (function() {
-        emailjs.init({ publicKey: "joATxlf01ucg1oicv" });
+        emailjs.init({ publicKey: "gV0E4RLerFiJnmSwu" });
         })();
     </script>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -32,8 +31,7 @@
             </button>
             <div class="changerLangue">
                 <a href="index.html">FR</a> |
-                <a href="en.html">EN</a> |
-                <a href="es.html">ES</a>
+                <a href="en.html">EN</a>
             </div>
         </nav>
     </header>
@@ -50,13 +48,21 @@
             <p>Étudiant ingénieur à l’INSA Rouen, curieux et engagé, je combine rigueur scientifique et créativité. Passionné par le développement web et les travaux concrets, je m’investis avec sérieux dans chaque projet, toujours prêt à me dépasser.</p>
         </section>
 
+        <section id="cours" class="section blanche">
+            <h2>Fiches de cours</h2>
+            <ul id="liste-fiches">
+                <li><a href="cours/mecanique.html" target="_blank">Mécanique</a></li>
+                <li><a href="cours/electromagnetisme.html" target="_blank">Électromagnétisme</a></li>
+            </ul>
+        </section>
+
         <section id="experience" class="section blanche">
             <h2>Expériences</h2>
             <div class="filtres">
                 <button class="boutonFiltre active" data-type="projet" title="Projets"></button>
                 <button class="boutonFiltre active" data-type="pro" title="Pro"></button>
                 <button class="boutonFiltre active" data-type="asso" title="Asso"></button>
-                <button class="boutonFiltre active" data-type="etude" title="Études"></button>
+                <button class="boutonFiltre active" data-type="etudes" title="Études"></button>
                 <button class="boutonFiltre active" data-type="diplome" title="Diplôme"></button>
             </div>
             <div class="chronologie">
@@ -93,7 +99,7 @@
                 </div>
                     
                 <div class="element">
-                    <div class="icone etude"><img src="assets/etudes.png" alt="Études" width="40"></div>
+                    <div class="icone etudes"><img src="assets/etudes.png" alt="Études" width="40"></div>
                     <div class="contenu">
                         <strong>INSA Rouen Normandie</strong>
                         <span class="date">Sept. 2023 - Juil. 2028</span>
@@ -131,7 +137,7 @@
                 </div>
 
                 <div class="element">
-                    <div class="icone etude"><img src="assets/etudes.png" alt="Études" width="40"></div>
+                    <div class="icone etudes"><img src="assets/etudes.png" alt="Études" width="40"></div>
                     <div class="contenu">
                         <strong>Lycée Pierre Corneille - Rouen</strong>
                         <span class="date">Sept. 2020 - Juin 2023</span>
@@ -169,7 +175,7 @@
                 </div>
 
                 <div class="element">
-                    <div class="icone etude"><img src="assets/etudes.png" alt="Études" width="40"></div>
+                    <div class="icone etudes"><img src="assets/etudes.png" alt="Études" width="40"></div>
                     <div class="contenu">
                         <strong>Collège Pablo Picasso - Saint-Étienne-du-Rouvray</strong>
                         <span class="date">Sept. 2017 - Juil. 2020</span>
@@ -180,14 +186,14 @@
                 </div>
 
                 <div class="element">
-                    <div class="icone etude"><img src="assets/etudes.png" alt="Études" width="40"></div>
+                    <div class="icone etudes"><img src="assets/etudes.png" alt="Études" width="40"></div>
                     <div class="contenu">
                         <strong>Conservatoire de musique et de danse - Préparation au CEM</strong>
                         <span class="date">Depuis 2013</span>
                         <p>- Piano cycle 3 validé</p>
                         <p>- Formation musicale en musiques actuelles cycle 3 validé</p>
                         <p>- Violoncelle cycle 2 validé</p>
-                        <p>- Préparation au Certificat d'Etude Musicale (CEM)</p>
+                        <p>- Préparation au Certificat d'etudes Musicale (CEM)</p>
                         <p>- Expérience scénique : concerts en solo, en groupe et en ensemble</p>
                         <p>- Participation à un groupe de musiques actuelles (claviers)</p>
                     </div>
@@ -396,6 +402,7 @@
                             <textarea name="message" placeholder="Entrez un message..." required></textarea>
                             <button type="submit">Envoyer</button>
                         </form>
+                        <div id="message-verification"></div>
                     </div>
                 </div>
             </div>

@@ -1,3 +1,17 @@
+#cours ul {
+  list-style-type: square;
+  padding-left: 2rem;
+}
+
+#cours ul li a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+#cours ul li a:hover {
+  text-decoration: underline;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   background-color: #f5f5f5;
@@ -151,11 +165,11 @@ h2 {
   height: 70%;
 }
 
-.icone.etude { border-color: #1944d2; }
+.icone.etudes { border-color: #38b6ff; }
 .icone.pro { border-color: #af1119; }
 .icone.projet { border-color: #ffde59; }
 .icone.asso { border-color: #7ed957; }
-.icone.diplome { border-color: #38b6ff; }
+.icone.diplome { border-color: #1944d2; }
 
 .contenu {
   background: #fff;
@@ -200,8 +214,8 @@ h2 {
 .boutonFiltre[data-type="projet"] { border-color: #ffde59; }
 .boutonFiltre[data-type="pro"] { border-color: #af1119; }
 .boutonFiltre[data-type="asso"] { border-color: #7ed957; }
-.boutonFiltre[data-type="etude"] { border-color: #1944d2; }
-.boutonFiltre[data-type="diplome"] { border-color: #38b6ff; }
+.boutonFiltre[data-type="etudes"] { border-color: #38b6ff; }
+.boutonFiltre[data-type="diplome"] { border-color: #1944d2; }
 
 .boutonFiltre.active { border-width: 4px; 
 }
@@ -220,7 +234,7 @@ h2 {
 .boutonFiltre[data-type="projet"].active { background-image: url('assets/projet.png'); }
 .boutonFiltre[data-type="pro"].active { background-image: url('assets/pro.png'); }
 .boutonFiltre[data-type="asso"].active { background-image: url('assets/asso.png'); }
-.boutonFiltre[data-type="etude"].active { background-image: url('assets/etudes.png'); }
+.boutonFiltre[data-type="etudes"].active { background-image: url('assets/etudes.png'); }
 .boutonFiltre[data-type="diplome"] { background-image: url('assets/diplome.png'); }
 
 .boutonFiltre:not(.active) { background-image: none !important; }
@@ -290,15 +304,16 @@ h2 {
 
 .competence-container {
   display: flex;
-  gap: 40px;
   flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 .categorie {
-  background-color: rgba(255, 255, 255, 0.05);
-  padding: 20px;
-  border-radius: 10px;
-  width: 300px;
+  width: 90%;
+  max-width: 300px;
+  margin: 0;
 }
 
 .categorie h3 {
